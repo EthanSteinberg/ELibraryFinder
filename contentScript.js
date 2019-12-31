@@ -47,6 +47,9 @@ for (const library of other_libraries) {
 }
 
 function getInfo(library, request) {
+    if (request.status != 200) {
+        return null;
+    }
     return request.text().then(text => {
         const lines = text.split("\n");
         for (const line of lines) {
@@ -72,11 +75,12 @@ Promise.all(libraryData).then(data => {
     const librariesHold = [];
 
     for (const item of data) {
-
-        if (item['isAvailable']) {
-            librariesAvailable.push(item);
-        } else if (item['isOwned']) {
-            librariesHold.push(item);
+        if (item != null) {
+            if (item['isAvailable']) {
+                librariesAvailable.push(item);
+            } else if (item['isOwned']) {
+                librariesHold.push(item);
+            }
         }
     }
 
