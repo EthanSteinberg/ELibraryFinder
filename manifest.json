@@ -1,0 +1,13 @@
+  {
+    "name": "ELibraryFinder",
+    "version": "1.0",
+    "description": "A tool for finding libraries with a particular item in their online collection.",
+    "manifest_version": 2,
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.overdrive.com/media/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+}
