@@ -4,6 +4,11 @@
     "description": "A tool for finding libraries with a particular item in their online collection.",
     "manifest_version": 2,
 
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+
     "content_scripts": [
       {
         "matches": ["*://*.overdrive.com/media/*"],
