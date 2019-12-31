@@ -25,6 +25,7 @@ other_libraries = [
     "tolibrary",
     "santaclarita",
     "bhpl",
+    "palmspringslibrary",
 
 ];
 
