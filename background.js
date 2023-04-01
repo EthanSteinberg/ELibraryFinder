@@ -1,34 +1,6 @@
 function getData(mediaName) {
 
-  const other_libraries = [
-      "sdcl",
-      "lapl",
-      "nypl",
-      "ncdl",
-      "saclibrary",
-      "berkeleypubliclibrary",
-      "ocls",
-      "ald",
-      "scdl",
-      "lbpl",
-      "sanjose",
-      "santaclara",
-      "iedigital",
-      "pas-gdl",
-      "kern",
-      "burbank",
-      "pls",
-      "blackgold",
-      "santamonica",
-      "sfpl",
-      "sbcldigital",
-      "oakland",
-      "rml",
-      "tolibrary",
-      "santaclarita",
-      "bhpl",
-      "palmspringslibrary",
-  ];
+  const other_libraries = ["lapl", "sunnyvale", "camdigital", "palmspringslibrary", "sanjose", "burbank", "sdcl", "salinaspubliclibrary", "rml", "sbcldigital", "tolibrary", "santabarbara", "bhpl", "ncdl", "marinet", "santaclarita", "blackgold", "scdl", "slolibrary", "sfpl", "emcfl", "carmel", "kern", "berkeleypubliclibrary", "lacountylibrary", "lbpl", "northnet", "ocpl", "pls", "saclibrary", "sonoma", "santaclara", "iedigital", "nypl", "oakland", "alhambralibrary"];
 
   const libraryData = [];
 
