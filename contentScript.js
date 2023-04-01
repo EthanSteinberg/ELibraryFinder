@@ -12,6 +12,7 @@ const mediaName = parts[2];
 chrome.runtime.sendMessage(mediaName, data => {
     const librariesAvailable = [];
     const librariesHold = [];
+    console.log("Got", data);
 
     for (const item of data) {
         if (item != null) {

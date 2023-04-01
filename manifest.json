@@ -2,11 +2,10 @@
     "name": "ELibraryFinder",
     "version": "1.0",
     "description": "A tool for finding libraries with a particular item in their online collection.",
-    "manifest_version": 2,
+    "manifest_version": 3,
 
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "background.js"
     },
 
     "content_scripts": [

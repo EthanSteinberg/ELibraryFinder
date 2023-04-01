@@ -47,20 +47,27 @@ function getData(mediaName) {
       return request.text().then(text => {
           const lines = text.split("\n");
           for (const line of lines) {
-              if (line.startsWith('            window.OverDrive.mediaItems')) {
+              if (line.startsWith('    window.OverDrive.mediaItems')) {
                   const firstEquals = line.indexOf('=');
                   const last = line.lastIndexOf(';');
                   const data = line.substring(firstEquals + 1, last);
+                  console.log("Got data", data);
                   const result = JSON.parse(data);
-                  const keys = Object.keys(result);
-                  const actualResult = result[keys[0]];
-                  actualResult['library'] = library;
-                  return actualResult;
+                  if (!result) {
+                    return result;
+                  } else {
+                    console.log(result);
+                    const keys = Object.keys(result);
+                    const actualResult = result[keys[0]];
+                    actualResult['library'] = library;
+                    return actualResult;
+                  }
               }
           }
 
-          console.error("NO SUCH DATA");
-          debugger;
+          console.log("NO SUCH DATA");
+          // debugger;
+          return null;
       });
   }
 
