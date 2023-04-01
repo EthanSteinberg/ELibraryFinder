@@ -59,4 +59,11 @@ chrome.runtime.sendMessage(mediaName, data => {
         `;
         locationToInject.insertAdjacentHTML('beforeend', content);
     }
+
+    if (librariesHold.length == 0 && librariesAvailable.length == 0) {
+        const content = `
+            <h3 class="folding-panel__label folding-panel__disabled">Not Available Anywhere</h3>
+        `;
+        locationToInject.insertAdjacentHTML('beforeend', content);
+    }
 });
